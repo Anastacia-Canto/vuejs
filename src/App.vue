@@ -4,16 +4,28 @@
 		v-model="drawer"
 		app
 	>
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title class="text-h6">
-            Todo List
-          </v-list-item-title>
-          <v-list-item-subtitle>
-            diary tasks
-          </v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
+		<div class="green lighten-3">
+
+			<v-list-item>
+				<v-list-item-content>
+					<v-avatar
+						size="150"
+						>
+						<img
+							src="anastacia.jpg"
+							alt="Anastácia"
+						
+						>
+					</v-avatar>
+				<v-list-item-title class="text-h6">
+					Anastácia Canto
+				</v-list-item-title>
+				<v-list-item-subtitle>
+					anaanestesia@gmail.com
+				</v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
 
       <v-divider></v-divider>
 
@@ -54,7 +66,7 @@
 
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-app-bar-title>Todo List</v-app-bar-title>
+      <v-app-bar-title>Personal Agenda</v-app-bar-title>
 
       <v-spacer></v-spacer>
 
@@ -82,7 +94,8 @@
     data: () => ({ 
 		drawer: null,
 		items: [
-		  { title: 'Todo', icon: 'mdi-format-list-checks', to:'/' },
+		  { title: 'Todo', icon: 'mdi-format-list-checks', to:'/todo' },
+		  { title: 'Calendar', icon: 'mdi-calendar-month', to:'/calendar' },
           { title: 'About', icon: 'mdi-help-box', to:'/about' }
         ]
 	}),
